@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./Master.css">
+    <title></title>
+  </head>
+  <body>
+
+    <div class="controls">
+      <div class="gamecont">
+        <div class="buttoncont" style="padding-top: 30px; margin-left: 30px;">
+          <table>
+            <tr>
+              <td class="top left">
+                <button type="button" name="button" class="tictac" id="top-left" onclick="countit(); topLeftFl(); wintest()">
+                  <p class="ticTacFill" id="top-left-fl"></p>
+                </button>
+              </td>
+              <td class="top">
+                <button type="button" name="button" class="tictac" id="top" onclick="countit(); topFl(); wintest()">
+                  <p class="ticTacFill" id="top-fl"></p>
+                </button>
+              </td>
+              <td class="top right">
+                <button type="button" name="button" class="tictac" id="top-right" onclick="countit(); topRightFl(); wintest()">
+                  <p class="ticTacFill" id="top-right-fl"></p>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <button type="button" name="button" class="tictac" id="mid-left" onclick="countit(); leftFl(); wintest()">
+                  <p class="ticTacFill" id="mid-left-fl"></p>
+                </button>
+              </td>
+              <td>
+                <button type="button" name="button" class="tictac" id="mid" onclick="countit(); midFl(); wintest()">
+                  <p class="ticTacFill" id="mid-fl"></p>
+                </button>
+              </td>
+              <td class="right">
+                <button type="button" name="button" class="tictac" id="mid-right" onclick="countit(); rightFl(); wintest()">
+                  <p class="ticTacFill" id="mid-right-fl"></p>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="bottom left">
+                <button type="button" name="button" class="tictac" id="bottom-left" onclick="countit(); bottomLeftFl(); wintest()">
+                  <p class="ticTacFill" id="bottom-left-fl"></p>
+                </button>
+              </td>
+              <td class="bottom ">
+                <button type="button" name="button" class="tictac" id="bottom" onclick="countit(); bottomFl(); wintest()">
+                  <p class="ticTacFill" id="bottom-fl"></p>
+                </button>
+              </td>
+              <td class="bottom right">
+                <button type="button" name="button" class="tictac" id="bottom-right" onclick="countit(); bottomRightFl(); wintest()">
+                  <p class="ticTacFill" id="bottom-right-fl"></p>
+                </button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="">
+        <button type="button" name="button" id="reset" onclick="window.location.reload()">&#8635;</button>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="main">
+      <div class="p1">
+        <div class="headcont">
+          <p class="playerhead">Player X</p>
+          <div class="triangle-left" id="trileft"></div>
+        </div>
+        <img class="winner" id="Xwin" src="./Winner.png" alt="" style="height: 540px;">
+      </div>
+
+      <div class="p2">
+        <div class="headcont">
+          <div class="triangle-right" id="triright" hidden></div>
+          <p class="playerhead" id="playero">Player O</p>
+        </div>
+        <img class="winner" id="Owin" src="./Winner.png" alt="" style="height: 540px; transform: scaleX(-1); float: right;">
+      </div>
+    </div>
+
+    <script type="text/javascript" src="./Script.js"></script>
+  </body>
+</html>
